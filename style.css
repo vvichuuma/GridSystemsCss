@@ -1,0 +1,262 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+header{
+    border: 1px solid red;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    width: 13rem;
+    float: right;
+    margin-top: -1.2rem;
+    
+}
+
+ul li:hover {
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white; 
+    color: black;
+    padding: 0.1rem;
+    border-radius: 0.1rem;
+}
+
+ul li{
+    list-style: none;
+}
+
+.ham{
+    display: none;
+}
+
+.bottomNav{
+    border: 1px solid black;
+    background-color: black;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottomNav li{
+    list-style: none;
+    border:0.1rem solid white;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.show{
+    display: flex;
+    animation-name: drive;
+    animation-duration: 0.5s;
+}
+
+.hide{
+    display: none;
+}
+
+@keyframes drive{
+    
+    from{
+        opacity: 0;
+    }
+    
+    to{
+        opacity: 1;
+    }
+}
+
+
+#MainSection{
+    border:1px solid green;
+    width: 100%; 
+    height: 25rem;
+    background-color: orangered
+}
+
+#msText{
+    display: flex;
+    justify-content: center;
+    margin-top: 12rem;
+}
+
+
+#sideSections{
+    border: 1px solid blue;
+}
+
+#sideSections #section_1{
+    border: 1px solid green;
+    height: 10rem;
+    background-color: green;
+    grid-area: section_1;
+    text-align: center;
+}
+
+#sideSections #section_2{
+    height: 10rem;
+    background-color: blue;
+    grid-area: section_2;
+    text-align: center;
+}
+
+#sideSections #section_3{
+    height: 10rem;
+    background-color: yellow;
+    grid-area: section_3;
+    text-align: center;
+}
+
+footer{
+    height: 5rem; 
+    background-color: rosybrown;
+    text-align: center;
+}
+
+#sideSections{
+    display: grid;
+    grid-template-areas: "section_1 section_2"
+                          "section_3 section_3"
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+      html{
+        font-size: 14px;
+        }
+    
+     ul li{
+        display: none;
+    }
+    
+          .ham{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+          width:1.5rem;
+          float: right;
+          margin-top:-1.7rem;
+    }
+    
+    #sideSections{
+    display: grid;
+    grid-template-areas: "section_1"
+                         "section_2"
+                          "section_3"
+}
+
+    
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+     ul li{
+        display: none;
+    }
+    
+      .ham{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+          width:1.5rem;
+          float: right;
+          margin-top:-1.7rem;
+    }
+    
+    #sideSections{
+    display: grid;
+    grid-template-areas: "section_1 section_2"
+                          "section_3 section_3"
+}
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+      html{
+        font-size: 16px;
+        }
+    
+     ul li{
+        display: none;
+    }
+    
+      .ham{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+          width:1.5rem;
+          float: right;
+          margin-top:-1.7rem;
+    }
+    
+    #sideSections{
+    display: grid;
+    grid-template-areas: "section_1 section_2"
+                          "section_3 section_3"
+}
+
+    
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+        html{
+        font-size: 16px;
+        }
+    
+    
+     ul li{
+        display: flex;
+    }
+    
+      .ham{
+        display: none;
+    }
+    
+    #sideSections{
+    display: grid;
+    grid-template-areas: "section_1 section_2"
+                          "section_3 section_3"
+}
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+    html{
+        font-size: 16px;
+    }
+    
+    ul li{
+        display: flex;
+    }
+    
+    .ham{
+        display: none;
+    }
+    
+    #sideSections{
+    display: grid;
+    grid-template-areas: "section_1 section_2"
+                          "section_3 section_3"
+}
+
+}
